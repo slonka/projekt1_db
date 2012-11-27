@@ -113,5 +113,4 @@ create table Registration
  Price smallmoney,
  constraint CheckCustomerOrCompany check ( (CustomerID is null and CompanyID is not null and ReservedSeats is not null) or
 											CustomerID is not null and CompanyID is null and ReservedSeats is null)
-
 );
