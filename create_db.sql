@@ -44,7 +44,7 @@ create table Company
  Name varchar(50),
  ContactID int,
  Username varchar(50) unique, -- potrzebny bedzie trigger aby sprawdzal aby czy Customer nie chce takiego samego Username
- [Password] varchar(40) not null,      -- lub przy logowaniu bedzie wybor: Customer / Company
+ [Password] varchar(128) not null,      -- lub przy logowaniu bedzie wybor: Customer / Company
  foreign key ( ContactID ) references Contact(id)		
 );
 
@@ -57,7 +57,7 @@ create table Customer
 												or Email like '%@%.[a-z][a-z]'),
  CompanyID int default null,
  Username varchar(50) unique,
- [Password] varchar(40) not null, -- sha1
+ [Password] varchar(128) not null, -- sha1
  --nie jestem pewien czy moze tu byc skoro moze byc null, to sie jakos triggerem zalatwi
  --foreign key ( CompanyID ) references Company(id)
 );
