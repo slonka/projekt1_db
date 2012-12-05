@@ -13,14 +13,6 @@ create table Venue
  foreign key ( ContactID ) references Contact(id),									
 );
 
-create table Agenda
-(
- ConferenceId int not null,
- LectureName varchar(255),
- TimeFrom time,
- TimeTo time
-);
-
 create table Conference
 (
  id int not null identity(1,1) primary key,
