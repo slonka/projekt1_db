@@ -2,7 +2,7 @@ create database ExampleData
 
 use ExampleData
 
-select COUNT(*) from GeneralData
+select * from GeneralData
 truncate table GeneralData
 
 CREATE TABLE GeneralData (
